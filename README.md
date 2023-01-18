@@ -9,7 +9,7 @@ I have added some wait time in the initial data fetch so you can preview what it
 In terms of technology choices:
 
 - I have used zustand to create the store, as this is the fastest way to set up a small store, in my experience.
-- I have used react-query to fetch and cache the data, considering we are pulling all our data from the server, the query caching that is offered by react-query is sufficient and much smaller.
+- I have used react-query to fetch and cache the data, considering we are pulling all our data from the server, the query caching that is offered by react-query is sufficient.
 - Due to the fact that we aren't updating this state in-app, it makes more sense to use the query apis provided by this library.
 - If we would mutate this data on the client, we could set up a redux store and initialise it with the data from server. If we wanted to maintain server-authority, I would personally continue to use react-query as they offer seamless, well-made mutation hooks.
 
