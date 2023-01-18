@@ -15,22 +15,12 @@ In terms of technology choices:
 
 Would love to chat about the tech choices I have made here and understand your point-of-view about these choices.
 
-## Libraries used
+## Main libraries used
 
-@react-native-async-storage/async-storage
-@react-native-masked-view/masked-view
-@react-navigation/native
-@react-navigation/native-stack
-@types/react
-@types/react-native
-react
-react-native
-react-native-linear-gradient
-react-native-safe-area-context
-react-native-screens
-react-native-skeleton-placeholder
-react-query
-zustand
+- react-native-skeleton-placeholder
+- react-query
+- zustand
+- react-navigation/native
 
 ## PreWarning
 
