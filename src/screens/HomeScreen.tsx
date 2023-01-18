@@ -1,17 +1,12 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text } from 'react-native';
-import { useQuery } from 'react-query';
-import fetchRetailers from '../../utils/fetchRetailers';
+import useFetchRetailers from '../../hooks/useFetchRetailers';
+
 import RetailerListItem from '../components/RetailerListItem';
 import RetailerLoadingSkeleton from '../components/RetailerLoadingSkeleton';
 
 const HomeScreen = ({ navigation }) => {
-  const {
-    isLoading,
-    error,
-    data: retailers,
-  } = useQuery('retailersData', fetchRetailers);
-
+  const { isLoading, error, data: retailers } = useFetchRetailers();
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView

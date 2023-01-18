@@ -1,7 +1,6 @@
 import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
-import { useQuery } from 'react-query';
-import fetchRetailer from '../../utils/fetchRetailer';
+import useFetchRetailer from '../../hooks/useFetchRetailer';
 import RetailerListItem from '../components/RetailerListItem';
 
 const RetailerScreen = ({ navigation, route }) => {
@@ -9,7 +8,7 @@ const RetailerScreen = ({ navigation, route }) => {
     isLoading,
     error,
     data: retailer,
-  } = useQuery('retailerData', () => fetchRetailer(route?.params?.id));
+  } = useFetchRetailer(route?.params?.id);
 
   return (
     <SafeAreaView>

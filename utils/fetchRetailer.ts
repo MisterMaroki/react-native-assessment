@@ -1,6 +1,6 @@
 import { Retailer } from '../types/Retailer';
 
-const fetchRetailers = async (id: number): Promise<Retailer> => {
+const fetchRetailer = async (id: number): Promise<Retailer> => {
   try {
     return await (
       await fetch(`http://localhost:3000/api/retailer/${id}`)
@@ -10,4 +10,4 @@ const fetchRetailers = async (id: number): Promise<Retailer> => {
   }
 };
 
-export default fetchRetailers;
+export default fetchRetailer;
