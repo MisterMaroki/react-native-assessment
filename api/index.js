@@ -12,7 +12,11 @@ const app = express();
  * GET: /api/retailers
  */
 app.get('/api/retailers', async (req, res) => {
-  res.json(retailers);
+  //give a delay of 2.5 seconds to simulate a slow network
+  //this is only for demo purposes to show the loading skeletons
+  setTimeout(() => {
+    res.json(retailers);
+  }, 2500);
 });
 
 /**
@@ -31,4 +35,4 @@ app.get('/api/retailer/:id', async (req, res) => {
 /**
  * Start the express server and listen
  */
-app.listen(3000, () => console.log(`Server started -> http://localhost:3000`));
+app.listen(3000, () => console.log('Server started -> http://localhost:3000'));
